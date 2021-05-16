@@ -18,7 +18,7 @@ interface OrderDao {
     @Query("SELECT * FROM `order`")
     fun getAllOrder(): LiveData<List<Order>>
 
-    @Query("SELECT * FROM `order` WHERE itemName =:itemName")
+    @Query("SELECT * FROM `order` WHERE itemName LIKE :itemName")
     fun searchOrderByName(itemName: String): LiveData<List<Order>>
 
     @Query("SELECT * FROM `order` WHERE id =:id")
