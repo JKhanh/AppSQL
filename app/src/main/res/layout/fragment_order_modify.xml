@@ -32,9 +32,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
+        android:hint="Item name"
         app:layout_constraintStart_toEndOf="@id/text_name"
         app:layout_constraintTop_toTopOf="@id/text_name"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/text_name"/>
 
     <TextView
         android:id="@+id/text_date"
@@ -50,10 +52,11 @@
         android:id="@+id/et_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:hint="Order Date"
         app:layout_constraintStart_toStartOf="@id/et_name"
-        app:layout_constraintStart_toEndOf="@id/text_date"
         app:layout_constraintTop_toTopOf="@id/text_date"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/text_date"/>
 
     <TextView
         android:id="@+id/text_price"
@@ -70,10 +73,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
+        android:hint="Price"
         app:layout_constraintStart_toStartOf="@id/et_name"
-        app:layout_constraintStart_toEndOf="@id/text_price"
         app:layout_constraintTop_toTopOf="@id/text_price"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/text_price"/>
 
     <TextView
         android:id="@+id/text_rating"
