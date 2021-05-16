@@ -1,5 +1,6 @@
 package com.ptit.appsql.order
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.ptit.appsql.databinding.FragmentOrderModifyBinding
+import java.util.*
 
 class OrderModifyFragment : Fragment() {
     private lateinit var binding: FragmentOrderModifyBinding
@@ -37,6 +39,18 @@ class OrderModifyFragment : Fragment() {
                     binding.rating.rating = order.ratingOrder.toFloat()
                 }
             }
+        }
+
+        binding.etDate.setOnClickListener {
+            val calendar = Calendar.getInstance()
+            DatePickerDialog(
+                requireContext(), { _, year, month, day ->
+                    binding.etDate.setText("$day/${month+1}/${year}")
+                },
+                calendar.get(Calendar.YEAR),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH)
+            ).show()
         }
 
         binding.btnSave.setOnClickListener {
