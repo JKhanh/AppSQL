@@ -6,8 +6,9 @@
     tools:context=".ModifyActivity">
 
     <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view_tag"
+        android:name="com.ptit.appsql.order.OrderModifyFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name=""/>
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
