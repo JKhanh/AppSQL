@@ -3,4 +3,5 @@
     <string name="search_hint">Name</string>
     <string name="star_no">%1$d star</string>
     <string name="star_have">%1$d stars</string>
+    <string name="price">%1$.2f $</string>
 </resources>
