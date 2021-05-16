@@ -22,22 +22,32 @@
             android:layout_height="wrap_content"
             android:padding="16dp">
 
+            <ImageView
+                android:id="@+id/cart_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_shopping_cart_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
             <TextView
                 android:id="@+id/text_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:text="@{order.itemName}"
                 android:textSize="24sp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintTop_toTopOf="@id/cart_icon"
+                app:layout_constraintStart_toEndOf="@id/cart_icon"/>
 
             <TextView
                 android:id="@+id/text_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@{order.dateOrder}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/text_name"/>
+                app:layout_constraintTop_toTopOf="@id/text_price"
+                app:layout_constraintStart_toEndOf="@id/text_price"
+                app:layout_constraintEnd_toStartOf="@id/text_rating"/>
 
             <TextView
                 android:id="@+id/text_price"
